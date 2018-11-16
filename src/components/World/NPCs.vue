@@ -1,0 +1,5 @@
+<template>
+    <div>
+        <h1>NPC's</h1>
+    </div>
+</template>
