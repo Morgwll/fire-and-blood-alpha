@@ -16,6 +16,7 @@ export default {
                 { name: "Home", route: "/"},
                 { name: "Characters", route: "/story/characters"},
                 { name: "Combat", route: "/story/combat"},
+                { name: "Weapons", route: "/story/weapons"},
                 { name: "Incantations", route: "/story/incantations"},
                 { name: "Story", route: "/story/story"},
                 { name: "Lore", route: "/story/Lore"}
@@ -25,9 +26,18 @@ export default {
     },
     methods: {
         populateMenu() {
-            console.log(this.$route.path);
             if (this.$route.path == "/story/characters") {
                 this.contentChange = this.$store.state.characters;
+            } else if (this.$route.path == "/story/combat") {
+                this.contentChange = this.$store.state.combat;
+            } else if (this.$route.path == "/story/weapons") {
+                this.contentChange = this.$store.state.weapons;
+            } else if (this.$route.path == "/story/incantations") {
+                this.contentChange = this.$store.state.incantations;
+            } else if (this.$route.path == "/story/story") {
+                this.contentChange = this.$store.state.story;
+            } else if (this.$route.path == "/story/lore") {
+                this.contentChange = this.$store.state.lore;
             }
         }
     }
