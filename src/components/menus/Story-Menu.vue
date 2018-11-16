@@ -16,8 +16,8 @@ export default {
                 { name: "Characters", route: "/story/characters", fawicon: '<i class="fas fa-users"></i>'},
                 { name: "Combat", route: "/story/combat", fawicon: '<i class="fas fa-shield-alt"></i>'},
                 { name: "Weapons", route: "/story/weapons", fawicon: '<i class="fas fa-users"></i>'},
-                { name: "Incantations", route: "/story/incantations", fawicon: '<i class="fas fa-book-open"></i>'},
-                { name: "Story", route: "/story/story", fawicon: '<i class="fas fa-feather"></i>'},
+                { name: "Incantations", route: "/story/incantations", fawicon: '<i class="fas fa-hat-wizard"></i>'},
+                { name: "Story", route: "/story/story", fawicon: '<i class="fas fa-book-open"></i>'},
                 { name: "Lore", route: "/story/Lore", fawicon: '<i class="fas fa-feather"></i>'}
             ],
             contentChange: null,

@@ -28,7 +28,10 @@ export const store = new Vuex.Store({
     },
     getters: {
         getCharacter: state => {
+            console.log(state.characters);
             for (let character in state.characters) {
+                console.log(character)
+                console.log(state.choice)
                 if(character.name == state.choice) {
                     return character;
                 }

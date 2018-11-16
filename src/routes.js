@@ -1,5 +1,6 @@
 import Home from './components/Home.vue';
 import Characters from './components/Story/Characters.vue';
+import Character from './components/Story/Character.vue';
 import Combat from './components/Story/Combat.vue';
 import Incantations from './components/Story/Incantations.vue';
 import Lore from './components/Story/Lore.vue';
@@ -14,16 +15,40 @@ import Advice from './components/World/Advice.vue';
 
 export const routes = [
     { path: '', component: Home },
-    { path: '/story/characters', component: Characters },
-    { path: '/story/combat', component: Combat },
-    { path: '/story/Weapons', component: Weapons },
-    { path: '/story/incantations', component: Incantations },
-    { path: '/story/lore', component: Lore },
-    { path: '/story/story', component: Story },
-    { path: '/world/npcs', component: NPCs },
-    { path: '/world/monsters', component: Monsters },
-    { path: '/world/pantheon', component: Pantheon },
-    { path: '/world/locations', component: Locations },
-    { path: '/world/dungeons', component: Dungeons },
-    { path: '/world/advice', component: Advice }
+    { path: '/story/characters', component: Characters, children: [
+        { path: ':name', component: Character }
+    ]},
+    { path: '/story/combat', component: Combat, children: [
+        { path: ':name', component: Character }
+    ]},
+    { path: '/story/Weapons', component: Weapons , children: [
+        { path: ':name', component: Character }
+    ]},
+    { path: '/story/incantations', component: Incantations , children: [
+        { path: ':name', component: Character }
+    ]},
+    { path: '/story/lore', component: Lore, children: [
+        { path: ':name', component: Character }
+    ]},
+    { path: '/story/story', component: Story, children: [
+        { path: ':name', component: Character }
+    ]},
+    { path: '/world/npcs', component: NPCs, children: [
+        { path: ':name', component: Character }
+    ]},
+    { path: '/world/monsters', component: Monsters, children: [
+        { path: ':name', component: Character }
+    ]},
+    { path: '/world/pantheon', component: Pantheon, children: [
+        { path: ':name', component: Character }
+    ]},
+    { path: '/world/locations', component: Locations, children: [
+        { path: ':name', component: Character }
+    ]},
+    { path: '/world/dungeons', component: Dungeons, children: [
+        { path: ':name', component: Character }
+    ]},
+    { path: '/world/advice', component: Advice, children: [
+        { path: ':name', component: Character }
+    ]}
 ]
