@@ -1,10 +1,10 @@
 <template>
-    <div>
-        <ul>
-            <router-link tag="li" :to="menu.route" @click.native="populateMenu" v-for="(menu, index) in storymenu" :key="index"><a>{{ menu.name }}</a></router-link>
+    <div class="menu-element menu-element-left" :class="{'menu-hidden-left': menuVisible}">
+        <ul class="tab-menu-left">
+            <router-link tag="li" class="menu-tab-left" :to="menu.route" @click.native="populateMenu" v-for="(menu, index) in storymenu" :key="index"><a v-html="menu.fawicon"></a></router-link>
         </ul>
-        <ul>
-            <li v-for="(element, i) in contentChange" :key="i">{{ element.name }}</li>
+        <ul class="menu">
+            <router-link v-for="(element, i) in contentChange" :key="i" @click.native="choice(element.name)" :to="element.name" tag="li"><a class="menu-hero"><img class="menu-hero-portrait" :src="element.portrait"><p>{{ element.name }}</p></a></router-link>
         </ul>
     </div>
 </template>
@@ -13,15 +13,15 @@ export default {
     data() {
         return {
             storymenu: [
-                { name: "Home", route: "/"},
-                { name: "Characters", route: "/story/characters"},
-                { name: "Combat", route: "/story/combat"},
-                { name: "Weapons", route: "/story/weapons"},
-                { name: "Incantations", route: "/story/incantations"},
-                { name: "Story", route: "/story/story"},
-                { name: "Lore", route: "/story/Lore"}
+                { name: "Characters", route: "/story/characters", fawicon: '<i class="fas fa-users"></i>'},
+                { name: "Combat", route: "/story/combat", fawicon: '<i class="fas fa-shield-alt"></i>'},
+                { name: "Weapons", route: "/story/weapons", fawicon: '<i class="fas fa-users"></i>'},
+                { name: "Incantations", route: "/story/incantations", fawicon: '<i class="fas fa-book-open"></i>'},
+                { name: "Story", route: "/story/story", fawicon: '<i class="fas fa-feather"></i>'},
+                { name: "Lore", route: "/story/Lore", fawicon: '<i class="fas fa-feather"></i>'}
             ],
-            contentChange: null
+            contentChange: null,
+            menuVisible: false
         }
     },
     methods: {
@@ -39,6 +39,9 @@ export default {
             } else if (this.$route.path == "/story/lore") {
                 this.contentChange = this.$store.state.lore;
             }
+        },
+        choice(choice) {
+            this.$store.state.chosen = choice;
         }
     }
 }

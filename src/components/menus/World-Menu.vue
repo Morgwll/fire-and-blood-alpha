@@ -1,10 +1,10 @@
 <template>
-    <div>
-        <ul>
-            <router-link tag="li" :to="menu.route" @click.native="populateMenu" v-for="(menu, index) in worldmenu" :key="index"><a>{{ menu.name }}</a></router-link>
+    <div class="menu-element menu-element-right" :class="{'menu-hidden-right': menuHidden}">
+        <ul class="tab-menu-right">
+            <router-link tag="li" class="menu-tab-right" :to="menu.route" @click.native="populateMenu" v-for="(menu, index) in worldmenu" :key="index"><a v-html="menu.fawicon"></a></router-link>
         </ul>
-        <ul>
-            <li v-for="(element, i) in contentChange" :key="i">{{ element.name }}</li>
+        <ul class="menu">
+            <li v-for="(element, i) in contentChange" :key="i" @click="choice(element.name)"><a class="menu-hero"><img class="menu-hero-portrait" :src="element.portrait"><p>{{ element.name }}</p></a></li>
         </ul>
     </div>
 </template>
@@ -13,15 +13,15 @@ export default {
     data() {
         return {
             worldmenu: [
-                { name: "Home", route: "/"},
-                { name: "NPCs", route: "/world/npcs"},
-                { name: "Monsters", route: "/world/monsters"},
-                { name: "Pantheon", route: "/world/pantheon"},
-                { name: "Locations", route: "/world/locations"},
-                { name: "Dungeons", route: "/world/dungeons"},
-                { name: "Advice", route: "/world/advice"}
+                { name: "NPCs", route: "/world/npcs", fawicon: '<i class="fas fa-users"></i>'},
+                { name: "Monsters", route: "/world/monsters", fawicon: '<i class="fas fa-crow"></i>'},
+                { name: "Pantheon", route: "/world/pantheon", fawicon: '<i class="fas fa-ankh"></i>'},
+                { name: "Locations", route: "/world/locations", fawicon: '<i class="fas fa-compass"></i>'},
+                { name: "Dungeons", route: "/world/dungeons", fawicon: '<i class="fas fa-dungeon"></i>'},
+                { name: "Advice", route: "/world/advice", fawicon: '<i class="fab fa-critical-role"></i>'}
             ],
-            contentChange: null
+            contentChange: null,
+            menuHidden: false
         }
     },
     methods: {
@@ -39,6 +39,9 @@ export default {
             } else if (this.$route.path == "/world/advice") {
                 this.contentChange = this.$store.state.advice;
             }
+        },
+        choice(choice) {
+            this.$store.state.chosen = choice;
         }
     }
 }
