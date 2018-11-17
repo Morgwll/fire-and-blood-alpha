@@ -49,9 +49,11 @@ export const store = new Vuex.Store({
             }
         },
         getCombatant: state => {
-            for (let combatant in state.combat) {
-                if(combatant.name == state.choice) {
-                    return combatant;
+            if (state.combat.length !== undefined) {
+                for (let index = 0; index < state.combat.length;index++) {
+                    if(state.combat[index].name == state.choice) {
+                        return state.combat[index];
+                    }
                 }
             }
         },

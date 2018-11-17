@@ -3,7 +3,7 @@
         <app-elements-menu :menuContent="menuContent" :route="'/world/combat/'"></app-elements-menu>
         <h1>Combat</h1>
         <p>Here are the combatants, appearing on the right in descending order of initiative.</p>
-        <router-view></router-view>
+        <router-view :combatant="this.$store.getters.getCombatant"></router-view>
     </div>
 </template>
 <script>
