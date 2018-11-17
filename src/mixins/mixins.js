@@ -35,7 +35,7 @@ Vue.mixin({
         sanity: info.sanity,
         isSorcerer: info.isSorcerer
       }
-      this.$store.state.combatants.push(object);
+      this.$store.state.combat.push(object);
     },
     regRoll(bonus, challenge) {
       this.$store.state.showRollModal = true;

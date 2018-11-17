@@ -4,7 +4,7 @@ import { characters } from '../data/characters';
 import { monsters } from '../data/monsters';
 import { npcs } from '../data/npcs';
 import { advice } from '../data/advice';
-import { dungeons } from '../data/dungeons';
+import { maps } from '../data/maps';
 import { incantations } from '../data/incantations';
 import { pantheon } from '../data/pantheon';
 import { locations } from '../data/locations';
@@ -21,33 +21,30 @@ export const store = new Vuex.Store({
         incantations,
         locations,
         npcs,
-        dungeons,
+        maps,
         pantheon,
         weapons,
-        choice: null
+        choice: ''
     },
     getters: {
         getCharacter: state => {
-            console.log(state.characters);
-            for (let character in state.characters) {
-                console.log(character)
-                console.log(state.choice)
-                if(character.name == state.choice) {
-                    return character;
+            for (let index = 0; index < state.characters.length;index++) {
+                if(state.characters[index].name == state.choice) {
+                    return state.characters[index];
                 }
             }
         },
         getNPC: state => {
-            for (let npc in state.npcs) {
-                if(npc.name == state.choice) {
-                    return npc;
+            for (let index = 0; index < state.npcs.length;index++) {
+                if(state.npcs[index].name == state.choice) {
+                    return state.npcs[index];
                 }
             }
         },
         getMonster: state => {
-            for (let monster in state.monsters) {
-                if(monster.name == state.choice) {
-                    return monster;
+            for (let index = 0; index < state.monsters.length;index++) {
+                if(state.monsters[index].name == state.choice) {
+                    return state.monsters[index];
                 }
             }
         },

@@ -1,20 +1,17 @@
 <template>
   <div id="app">
-    <app-story-menu></app-story-menu>
     <app-world-menu></app-world-menu>
     <router-view></router-view>
   </div>
 </template>
 
 <script>
-import appStoryMenu from './components/menus/Story-Menu.vue';
 import appWorldMenu from './components/menus/World-Menu.vue';
 
 export default {
   name: 'app',
   components: {
-    appStoryMenu,
-    appWorldMenu,
+    appWorldMenu
   }
 }
 </script>
@@ -37,11 +34,10 @@ h1, h2, h3, h4 {
   text-align: center;
 }
   .menu-tab-left, .menu-tab-right {
-    //position: absolute;
-    top: 50px;
+    top: 20px;
     height: 25px;
     width: 20px;
-    background-color: rgba(0,0,0,.8);
+    background-color: rgba(0,0,0,.6);
     color: #fff;
     padding: 5px;
     line-height: 25px;
@@ -102,10 +98,6 @@ h1, h2, h3, h4 {
       }
     }
   }
-  .menu-hidden-left {
-    left: -100px;
-    transition: .2s;
-  }
   .menu-hidden-right {
     right: -100px;
     transition: .2s;
@@ -114,18 +106,13 @@ h1, h2, h3, h4 {
     background-color: rgba(0,0,0,.8);
   }
   .tab-menu-left {
-    left: 100px;
-  }
-  .tab-menu-right {
-    left: -30px;
-  }
-  .tab-menu-left, .tab-menu-right {
     position: absolute;
-    top: 0;
+    top: -20px;
+    left: 0;
     list-style-type: none;
     padding-left: 0;
     li {
-      margin: 10px 0;
+      margin: 2px 0;
       cursor: pointer;
       a {
         color: #fff;

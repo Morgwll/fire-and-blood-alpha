@@ -1,7 +1,7 @@
 <template>
     <div>
-        <app-elements-menu :menuContent="menuContent" :route="'/world/lore/'"></app-elements-menu>
-        <h1>Lore</h1>
+        <app-elements-menu :menuContent="menuContent" :route="'/world/pantheon/'"></app-elements-menu>
+        <h1>Pantheon</h1>
         <div>Name: {{ this.$store.getters.getCharacter }}</div>
     </div>
 </template>
