@@ -25,6 +25,7 @@ Vue.mixin({
       const object = {
         name: info.name,
         portrait: info.portrait,
+        stats: info.stats,
         armor: info.armor,
         wis: info.stats.wisdom,
         initiative: info.initiative,
@@ -33,6 +34,11 @@ Vue.mixin({
           weapon: info.attack + 2
         },
         sanity: info.sanity,
+        hitpoints: info.hitpoints,
+        stamina: info.stamina,
+        maxHitpoints: info.maxHitpoints,
+        maxStamina: info.maxStamina,
+        maxSanity: info.maxSanity,
         isSorcerer: info.isSorcerer
       }
       this.$store.state.combat.push(object);

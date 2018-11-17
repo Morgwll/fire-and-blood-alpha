@@ -119,5 +119,94 @@ h1, h2, h3, h4 {
       }
     }
   }
+  .addToRoster {
+    background-color: transparent;
+    font-family: "New Rocker";
+    border: 3px solid #000;
+        margin: 10px calc(50% - 145px);
+    border-radius: 6px;
+    font-size: 2rem;
+    padding: 5px;
+    line-height: 50px;
+    cursor: pointer;
+    i {
+      font-size: 3rem;
+    }
+  }
+  .card {
+    &-header {
+      display: flex;
+      border: 1px solid #000;
+      padding: 20px;
+      &-info {
+        width: 100%;
+        padding: 5px 0;
+        font-family: "New Rocker";
+        font-size: 1.7rem;
+      }
+      //justify-content: center;
+      //align-items: center;
+      &-counters {
+        display: flex;
+        &__hp, &__sanity, &__stamina {
+          background: #fff;
+          text-align: center;
+          margin: 0 10px;
+          font-family: New Rocker;
+          padding: 5px;
+          font-size: 2.5rem;
+          min-width: 85px;
+          max-height: 275px;
+          font-size: .9rem;
+          &-score {
+            font-size: 2.5rem;
+          }
+          button {
+            margin: 0 auto;
+          }
+          h4 {
+            font-size: 1rem;
+          }
+          p {
+            margin: 10px;
+            
+          }
+        }
+      }
+      &-stats {
+        margin: 0 20px;
+        border: 1px solid #000;
+        padding: 5px;
+        text-align: center;
+        &__block {
+          display: flex;
+          &-container {
+            padding: 5px;
+            border: 3px solid #000;
+            background: #fff;
+            margin: 5px;
+            min-width: 85px;
+            border-radius: 35%;
+            font-weight: 700;
+            font-size: 2.4rem;
+            font-family: "New Rocker";
+            h4 {
+              font-size: 1rem;
+              margin: 10px 0 0 0;
+            }
+          }
+        }
+      }
+      &-portrait {
+          width: 275px;
+          height: 275px;
+          overflow: hidden;
+          float: left;
+          img {
+              width: 100%;
+          }
+      }
+    }
+  }
 </style>
  

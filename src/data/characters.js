@@ -28,8 +28,12 @@ export const characters = [
             survival: 2,
         },
         madness: 0,
-        hitpoints: 90,
+        maxHitpoints: 30,
+        hitpoints: 30,
+        maxSanity: 60,
         sanity: 60,
+        maxStamina: 9,
+        stamina: 9,
         experience: 0,
         level: 1,
         currency: {
@@ -69,8 +73,12 @@ export const characters = [
             survival: 2,
         },
         madness: 0,
-        hitpoints: null,
-        sanity: null,
+        maxHitpoints: 30,
+        hitpoints: 30,
+        sanity: 60,
+        maxSanity: 60,
+        sanity: 60,
+        maxStamina: 9,
         experience: 0,
         level: 1,
         currency: {
@@ -110,8 +118,12 @@ export const characters = [
             survival: 2,
         },
         madness: 0,
-        hitpoints: null,
-        sanity: null,
+        maxHitpoints: 30,
+        hitpoints: 30,
+        sanity: 60,
+        maxSanity: 60,
+        sanity: 60,
+        maxStamina: 9,
         experience: 0,
         level: 1,
         currency: {
@@ -151,8 +163,12 @@ export const characters = [
             survival: 2,
         },
         madness: 0,
-        hitpoints: null,
-        sanity: null,
+        maxHitpoints: 30,
+        hitpoints: 30,
+        sanity: 60,
+        maxSanity: 60,
+        sanity: 60,
+        maxStamina: 9,
         experience: 0,
         level: 1,
         currency: {
@@ -163,5 +179,4 @@ export const characters = [
             copper: 120
         }
     }
-  
 ]
