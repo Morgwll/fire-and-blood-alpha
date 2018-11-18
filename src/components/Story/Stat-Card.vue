@@ -6,31 +6,49 @@
                 <div class="card-header-stats__block">
                     <div class="card-header-stats__block-container">
                         <h4>Strength</h4>
-                        {{creature.stats.strength }}
+                        {{creature.stats.strength.value }}
+                        <div class="card-header-stats__block-container-bonus">
+                            <h4>Bonus:</h4> {{ creature.stats.strength.bonus}}
+                        </div>
                     </div>
                     <div class="card-header-stats__block-container">
                         <h4>Agility</h4>
-                        {{creature.stats.agility }}
+                        {{creature.stats.agility.value }}
+                        <div class="card-header-stats__block-container-bonus">
+                            <h4>Bonus:</h4> {{ creature.stats.agility.bonus}}
+                        </div>
                     </div>
                 </div>
                 <div class="card-header-stats__block">
                     <div class="card-header-stats__block-container">
                         <h4>Constitution</h4>
-                        {{creature.stats.constitution }}
+                        {{creature.stats.constitution.value }}
+                        <div class="card-header-stats__block-container-bonus">
+                            <h4>Bonus:</h4> {{ creature.stats.constitution.bonus}}
+                        </div>
                     </div>
                     <div class="card-header-stats__block-container">
                         <h4>Wisdom</h4>
-                        {{creature.stats.wisdom }}
+                        {{creature.stats.wisdom.value }}
+                        <div class="card-header-stats__block-container-bonus">
+                            <h4>Bonus:</h4> {{ creature.stats.wisdom.bonus}}
+                        </div>
                     </div>
                 </div>
                 <div class="card-header-stats__block">
                     <div class="card-header-stats__block-container">
                         <h4>Appearance</h4>
-                        {{creature.stats.appearance }}
+                        {{creature.stats.appearance.value }}
+                        <div class="card-header-stats__block-container-bonus">
+                            <h4>Bonus:</h4> {{ creature.stats.appearance.bonus}}
+                        </div>
                     </div>
                     <div class="card-header-stats__block-container">
                         <h4>Endurance</h4>
-                        {{creature.stats.endurance }}
+                        {{creature.stats.endurance.value }}
+                        <div class="card-header-stats__block-container-bonus">
+                            <h4>Bonus:</h4> {{ creature.stats.endurance.bonus}}
+                        </div>
                     </div>
                 </div>
             </div>

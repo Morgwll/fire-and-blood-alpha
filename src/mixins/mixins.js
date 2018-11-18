@@ -30,6 +30,7 @@ Vue.mixin({
         wis: info.stats.wisdom,
         initiative: info.initiative,
         attacks: info.attacks,
+        incantations: info.incantations,
         sanity: info.sanity,
         hitpoints: info.hitpoints,
         defense: info.defense,

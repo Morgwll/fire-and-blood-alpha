@@ -188,13 +188,16 @@ h1, h2, h3, h4 {
             background: #fff;
             margin: 5px;
             min-width: 85px;
-            border-radius: 35%;
+            border-radius: 10%;
             font-weight: 700;
             font-size: 2.4rem;
             font-family: "New Rocker";
             h4 {
               font-size: 1rem;
               margin: 10px 0 0 0;
+            }
+            &-bonus {
+              font-size: 1.8rem;
             }
           }
         }

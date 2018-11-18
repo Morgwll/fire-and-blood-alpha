@@ -4,12 +4,30 @@ export const characters = [
         portrait: 'https://ubistatic-a.akamaihd.net/0004/prod/images/151317_Heroes_Haven/Krysztof.jpg',
         clan: "Raven Black",
         stats: {
-            strength: 16,
-            agility:  14,
-            constitution: 12,
-            wisdom:  11,
-            appearance: 10,
-            endurance: 9
+            strength: {
+                value: 11,
+                bonus: 1
+            },
+            agility:  {
+                value: 14,
+                bonus: 2
+            },
+            constitution:{
+                value: 12,
+                bonus: 1
+            },
+            wisdom:  {
+                value: 16,
+                bonus: 3
+            },
+            appearance: {
+                value: 10,
+                bonus: 0
+            },
+            endurance: {
+                value: 9,
+                bonus: -1
+            }
         },
         skills: {
             acrobatics: 1,
@@ -28,6 +46,7 @@ export const characters = [
             survival: 2,
         },
         madness: 0,
+        movement: 30,
         maxHitpoints: 30,
         hitpoints: 30,
         maxSanity: 60,
@@ -59,6 +78,8 @@ export const characters = [
                 reach: 5
             }
         ],
+        incantations: [
+        ],
         defense: 13,
         currency: {
             jewels: 2000,
@@ -73,12 +94,30 @@ export const characters = [
         portrait: 'https://ubistatic-a.akamaihd.net/0004/prod/images/151317_Heroes_Haven/Krysztof.jpg',
         clan: "Raven Black",
         stats: {
-            strength: 16,
-            agility:  14,
-            constitution: 12,
-            wisdom:  11,
-            appearance: 10,
-            endurance: 9
+            strength: {
+                value: 11,
+                bonus: 1
+            },
+            agility:  {
+                value: 14,
+                bonus: 2
+            },
+            constitution:{
+                value: 12,
+                bonus: 1
+            },
+            wisdom:  {
+                value: 16,
+                bonus: 3
+            },
+            appearance: {
+                value: 10,
+                bonus: 0
+            },
+            endurance: {
+                value: 9,
+                bonus: -1
+            }
         },
         skills: {
             acrobatics: 1,
@@ -97,6 +136,7 @@ export const characters = [
             survival: 2,
         },
         madness: 0,
+        movement: 30,
         maxHitpoints: 30,
         hitpoints: 30,
         sanity: 60,
@@ -127,6 +167,15 @@ export const characters = [
                 damage: 4,
                 stam: 3,
                 reach: 5
+            }
+        ],
+        incantations: [
+            {
+                name: "Bane",
+                value: 3,
+                damage: 10,
+                cost: 10,
+                reach: 30
             }
         ],
         defense: 14,
@@ -143,12 +192,30 @@ export const characters = [
         portrait: 'https://ubistatic-a.akamaihd.net/0004/prod/images/151317_Heroes_Haven/Krysztof.jpg',
         clan: "Raven Black",
         stats: {
-            strength: 11,
-            agility:  14,
-            constitution: 12,
-            wisdom:  16,
-            appearance: 10,
-            endurance: 9
+            strength: {
+                value: 11,
+                bonus: 1
+            },
+            agility:  {
+                value: 14,
+                bonus: 2
+            },
+            constitution:{
+                value: 12,
+                bonus: 1
+            },
+            wisdom:  {
+                value: 16,
+                bonus: 3
+            },
+            appearance: {
+                value: 10,
+                bonus: 0
+            },
+            endurance: {
+                value: 9,
+                bonus: -1
+            }
         },
         skills: {
             acrobatics: 1,
@@ -167,6 +234,7 @@ export const characters = [
             survival: 2,
         },
         madness: 0,
+        movement: 30,
         maxHitpoints: 30,
         hitpoints: 30,
         sanity: 60,
@@ -199,6 +267,15 @@ export const characters = [
                 reach: 5
             }
         ],
+        incantations: [
+            {
+                name: "Bane",
+                value: 3,
+                damage: 10,
+                san: 10,
+                reach: 30
+            }
+        ],
         defense: 14,
         currency: {
             jewels: 2000,
@@ -213,12 +290,30 @@ export const characters = [
         portrait: 'https://ubistatic-a.akamaihd.net/0004/prod/images/151317_Heroes_Haven/Krysztof.jpg',
         clan: "Raven Black",
         stats: {
-            strength: 14,
-            agility:  18,
-            constitution: 12,
-            wisdom:  9,
-            appearance: 10,
-            endurance: 11
+            strength: {
+                value: 11,
+                bonus: 1
+            },
+            agility:  {
+                value: 14,
+                bonus: 2
+            },
+            constitution:{
+                value: 12,
+                bonus: 1
+            },
+            wisdom:  {
+                value: 16,
+                bonus: 3
+            },
+            appearance: {
+                value: 10,
+                bonus: 0
+            },
+            endurance: {
+                value: 9,
+                bonus: -1
+            }
         },
         skills: {
             acrobatics: 1,
@@ -237,6 +332,7 @@ export const characters = [
             survival: 2,
         },
         madness: 0,
+        movement: 30,
         maxHitpoints: 30,
         hitpoints: 30,
         sanity: 60,
@@ -268,6 +364,8 @@ export const characters = [
                 stam: 3,
                 reach: 5
             }
+        ],
+        incantations: [
         ],
         defense: 14,
         currency: {
