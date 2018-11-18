@@ -1,16 +1,18 @@
 <template>
-  <div id="app">
+  <div id="app" class="app-styling">
     <app-world-menu></app-world-menu>
+    <app-roll-result v-if="this.$store.state.showRollModal"></app-roll-result>
     <router-view></router-view>
   </div>
 </template>
 
 <script>
 import appWorldMenu from './components/menus/World-Menu.vue';
-
+import appRollResult from './components/rollResult.vue';
 export default {
   name: 'app',
   components: {
+    appRollResult,
     appWorldMenu
   }
 }
@@ -24,7 +26,7 @@ body {
   padding: 20px 35px;
 }
 .app-styling {
-  max-width: 850px;
+  max-width: 992px;
   width: 100%;
   margin: 0 auto;
 }

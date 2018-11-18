@@ -32,10 +32,34 @@ export const characters = [
         hitpoints: 30,
         maxSanity: 60,
         sanity: 60,
-        maxStamina: 9,
-        stamina: 9,
+        maxStamina: 18,
+        stamina: 18,
         experience: 0,
         level: 1,
+        attacks: [
+            {
+                name: "Brawl",
+                value: 2,
+                damage: 1,
+                stam: 1,
+                reach: 5
+            },
+            {
+                name: "Knife",
+                value: 2,
+                damage: 2,
+                stam: 1,
+                reach: 5
+            },
+            {
+                name: "Battle Axe",
+                value: 3,
+                damage: 4,
+                stam: 3,
+                reach: 5
+            }
+        ],
+        defense: 13,
         currency: {
             jewels: 2000,
             gold: 30,
@@ -78,9 +102,34 @@ export const characters = [
         sanity: 60,
         maxSanity: 60,
         sanity: 60,
-        maxStamina: 9,
+        maxStamina: 18,
+        stamina: 18,
         experience: 0,
         level: 1,
+        attacks: [
+            {
+                name: "Brawl",
+                value: 2,
+                damage: 1,
+                stam: 1,
+                reach: 5
+            },
+            {
+                name: "Knife",
+                value: 2,
+                damage: 2,
+                stam: 1,
+                reach: 5
+            },
+            {
+                name: "Battle Axe",
+                value: 3,
+                damage: 4,
+                stam: 3,
+                reach: 5
+            }
+        ],
+        defense: 14,
         currency: {
             jewels: 2000,
             gold: 30,
@@ -123,9 +172,34 @@ export const characters = [
         sanity: 60,
         maxSanity: 60,
         sanity: 60,
-        maxStamina: 9,
+        maxStamina: 18,
+        stamina: 18,
         experience: 0,
         level: 1,
+        attacks: [
+            {
+                name: "Brawl",
+                value: 2,
+                damage: 1,
+                stam: 1,
+                reach: 5
+            },
+            {
+                name: "Knife",
+                value: 2,
+                damage: 2,
+                stam: 1,
+                reach: 5
+            },
+            {
+                name: "Battle Axe",
+                value: 3,
+                damage: 4,
+                stam: 3,
+                reach: 5
+            }
+        ],
+        defense: 14,
         currency: {
             jewels: 2000,
             gold: 30,
@@ -168,9 +242,34 @@ export const characters = [
         sanity: 60,
         maxSanity: 60,
         sanity: 60,
-        maxStamina: 9,
+        maxStamina: 18,
+        stamina: 18,
         experience: 0,
         level: 1,
+        attacks: [
+            {
+                name: "Brawl",
+                value: 2,
+                damage: 1,
+                stam: 1,
+                reach: 5
+            },
+            {
+                name: "Knife",
+                value: 2,
+                damage: 2,
+                stam: 1,
+                reach: 5
+            },
+            {
+                name: "Battle Axe",
+                value: 3,
+                damage: 4,
+                stam: 3,
+                reach: 5
+            }
+        ],
+        defense: 14,
         currency: {
             jewels: 2000,
             gold: 30,

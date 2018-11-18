@@ -36,14 +36,6 @@
                 </div>
             </div>
             <div>
-                <div class="card-header-info">
-                    Clan/Family: {{  creature.clan }}
-                    <br>
-                    Level: {{ creature.level }}
-                    <br>
-                    Experience: {{ creature.experience }}
-                    <br>
-                </div>
                 <div class="card-header-portrait">
                     <img :src="creature.portrait"/>
                 </div>
@@ -77,7 +69,21 @@
                 </div>
                 </div>
             </div>
+            
         </div>
+        <div class="chard-header-attacks">
+                Attack type:
+                <select v-model="atck">
+                    <option :value="wpn" v-for="(wpn, index) in creature.attacks" :key="index">{{ wpn.name }}</option>
+                </select>
+                Target:
+                <select v-model="defr">
+                    <option :value ="fighter" v-for="(fighter, index) in this.$store.state.combat" :key="index">{{ fighter.name }}</option>
+                </select>
+                <button @click="attack(atck.value, defr.defense, atck.stam, creature.stamina, atck.damage, defr.hitpoints)">Roll</button>
+            </div>
+            <div class="chard-header-skills">
+            </div>
     </div>
 </template>
 <script>
@@ -86,8 +92,36 @@
         props: ['creature'],
         data() {
             return {
-
+                atck: {
+                    value: null,
+                    damage: null,
+                    stam: null
+                },
+                dmg: null,
+                defr: {
+                    defense: null,
+                    hitpoints: null,
+                }
             }
+        },
+        methods: {
+            attack(atkr, defr, cost, end, damg, htpts) {
+                this.$store.state.showRollModal = true;
+                this.$store.state.roll = this.diceRoller(20);
+                let attack = this.$store.state.roll + atkr;
+                this.creature.stamina = this.creature.stamina - cost;
+                if (attack > defr) {
+                    this.$store.state.rollMessage = "It's a Hit!";
+                    this.defr.hitpoints = this.defr.hitpoints - damg;
+                } else if(this.$store.state.roll === 20) {
+                    this.$store.state.rollMessage = "Natural 20!!";
+                    this.defr.hitpoints = this.defr.hitpoints - (damg * 2);
+                } else if(this.$store.state.roll === 1) {
+                    this.$store.state.rollMessage = "Oh, it's a 1...";
+                } else {
+                    this.$store.state.rollMessage = "Miss";
+                }
+            },
         }
     }
 </script>

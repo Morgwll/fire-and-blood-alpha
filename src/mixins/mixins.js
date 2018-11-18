@@ -29,12 +29,10 @@ Vue.mixin({
         armor: info.armor,
         wis: info.stats.wisdom,
         initiative: info.initiative,
-        attacks: {
-          unarmed: info.attack,
-          weapon: info.attack + 2
-        },
+        attacks: info.attacks,
         sanity: info.sanity,
         hitpoints: info.hitpoints,
+        defense: info.defense,
         stamina: info.stamina,
         maxHitpoints: info.maxHitpoints,
         maxStamina: info.maxStamina,
@@ -61,23 +59,8 @@ Vue.mixin({
         this.$store.state.rollMessage = "Miss";
       }
     },
-    attack(atkr, defr, cost) {
-      this.$store.state.bonus = this.baseAttack;
+    attck() {
       this.$store.state.showRollModal = true;
-      this.$store.state.roll = this.diceRoller(20);
-      const hit = this.$store.state.roll + atkr;
-      this.endurance = this.endurance - cost;
-      if(this.$store.state.roll === 20) {
-        this.$store.state.rollMessage = "Natural 20!!";
-      }
-      if(this.$store.state.roll === 1) {
-        this.$store.state.rollMessage = "Oh, it's a 1...";
-      }
-      if (hit > defr) {
-        this.$store.state.rollMessage = "It's a Hit!";
-      } else {
-        this.$store.state.rollMessage = "Miss";
-      }
     },
     cast(dmg, defr, cost) {
       this.sorcery = this.sorcery - cost;

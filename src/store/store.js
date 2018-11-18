@@ -24,7 +24,8 @@ export const store = new Vuex.Store({
         maps,
         pantheon,
         weapons,
-        choice: ''
+        choice: '',
+        showRollModal: false
     },
     getters: {
         getCharacter: state => {
