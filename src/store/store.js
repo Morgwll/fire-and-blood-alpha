@@ -29,76 +29,49 @@ export const store = new Vuex.Store({
     },
     getters: {
         getCharacter: state => {
-            for (let index = 0; index < state.characters.length;index++) {
-                if(state.characters[index].name == state.choice) {
-                    return state.characters[index];
-                }
-            }
+            const character = state.characters.find( character => character.name == state.choice );
+            return character;
         },
         getNPC: state => {
-            for (let index = 0; index < state.npcs.length;index++) {
-                if(state.npcs[index].name == state.choice) {
-                    return state.npcs[index];
-                }
-            }
+            const npc = state.npcs.find( npc => npc.name == state.choice );
+            return npc;
         },
         getMonster: state => {
-            for (let index = 0; index < state.monsters.length;index++) {
-                if(state.monsters[index].name == state.choice) {
-                    return state.monsters[index];
-                }
-            }
+            const monster = state.monsters.find( monster => monster.name == state.choice );
+            return monster;
         },
+        /* this is the culprit for the problem */
         getCombatant: state => {
             if (state.combat.length !== undefined) {
-                for (let index = 0; index < state.combat.length;index++) {
-                    if(state.combat[index].name == state.choice) {
-                        return state.combat[index];
-                    }
-                }
+                const combatant = state.combat.find( creature => creature.index == state.choice.index );
+                //console.log(combatant);
+                return combatant;
             }
         },
+        /* this is the culprit for the problem - end */
         getIncantation: state => {
-            for (let incantation in state.incantations) {
-                if(incantation.name == state.choice) {
-                    return incantation;
-                }
-            }
+            const incantation = state.incantations.find( incantation => incantation.name == state.choice );
+            return incantation;
         },
         getLocation: state => {
-            for (let location in state.locations) {
-                if(location.name == state.choice) {
-                    return location;
-                }
-            }
+            const location = state.locations.find( location => location.name == state.choice );
+            return location;
         },
         getDungeon: state => {
-            for (let dungeon in state.dungeons) {
-                if(dungeon.name == state.choice) {
-                    return dungeon;
-                }
-            }
+            const dungeon = state.dungeons.find( dungeon => dungeon.name == state.choice );
+            return dungeon;
         },
         getDeity: state => {
-            for (let deity in state.pantheon) {
-                if(deity.name == state.choice) {
-                    return deity;
-                }
-            }
+            const deity = state.deitys.find( deity => deity.name == state.choice );
+            return deity;
         },
         getWeapon: state => {
-            for (let weapon in state.weapons) {
-                if(weapon.name == state.choice) {
-                    return weapon;
-                }
-            }
+            const weapon = state.weapons.find( weapon => weapon.name == state.choice );
+            return weapon;
         },
         getAdvice: state => {
-            for (let advice in state.advice) {
-                if(advice.name == state.choice) {
-                    return advice;
-                }
-            }
+            const advice = state.advices.find( advice => advice.name == state.choice );
+            return advice;
         }
     }
 });

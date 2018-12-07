@@ -23,6 +23,7 @@ Vue.mixin({
     },
     addToRoster(info) {
       const object = {
+        index: this.$store.state.combat.length + 1,
         name: info.name,
         portrait: info.portrait,
         stats: info.stats,
